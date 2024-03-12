@@ -8,7 +8,13 @@
 
 body {
     font-family: "Poppins";
+    overflow: hidden;
+}
 
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #5356FF;
 }
 
 nav {
@@ -53,4 +59,154 @@ a:hover {
     position: relative;
     bottom: 5px;
     color: aqua;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.col {
+    width: 50%;
+}
+
+.greetings {
+    display: block;
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: black;
+}
+
+.greetings::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 45px;
+    bottom: 10px;
+    background-color: #070F2B;
+    
+}
+h1 {
+    display:  block;
+    font-size: 4em;
+    font-weight: 900;
+
+}
+
+.multitext {
+    text-transform: uppercase;
+    color: #E8C872;
+    font-size: 0.5em;
+    display: block;
+    text-align: center;
+}
+
+p {
+    display: block;
+    width: 100%;
+   text-align: center;
+}
+
+.button {
+    width: 100%;
+    margin-left: 100px;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400;
+    color: white;
+    background-color: #222831;
+    padding: 8px 14px;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0px 30px 77px -2px rgba(0,0,0,0.75);;
+    border-radius: 30px;
+}
+
+button:hover {
+    position: relative;
+    bottom: 2px;
+    background-color: #5356FF;
+}
+.name {
+    display: inline;
+    font-size: 50px;
+}
+
+col0 {
+    width: 50%;
+    z-index: 5;
+}
+.imgbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.imgbox img {
+    position: relative;
+    height: 100%;
+    width: calc(90% - 80px);
+    top: -100px;
+    bottom: -100px;
+    right: 50px;
+    left: 100px;
+    box-shadow: -4px 30px 77px 10px rgba(252,220,42,0.75);
+    animation: animateUser 4s linear infinite ;
+}
+
+@keyframes animateUser {
+    50%{
+        right: 30px;
+        top: -90px;
+    }
+}
+
+.header::before {
+    position: absolute;
+    content: '';
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    left: -9%;
+    bottom: 2px;
+    top: 40%;
+    background: linear-gradient(45deg,#5356FF,#222831);
+    animation: object1 6s linear infinite;
+}
+
+.header::after {
+    position: absolute;
+    content: '';
+    height: 100px;
+    width: 100px;
+    border-radius:50%;
+    left: 35%;
+    top: 12%;
+    background: linear-gradient(45deg,#5356FF,#222831);
+    animation: object2 6s linear infinite;
+}
+
+@keyframes object1 {
+    50% {
+        left: -13%;
+        top: 41%;
+    }
+}
+
+@keyframes object2 {
+    50% {
+        left: 35%;
+        bottom: 1%;
+    }
 }
